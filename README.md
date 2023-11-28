@@ -1,6 +1,4 @@
-# AWS-Networking-implementation
-
-## AWS Networking implementation (VPC, Subnets, IG, NAT, Routing)
+## AWS Networking Implementation (VPC, Subnets, IG, NAT, Routing)
 
 #### What is an Amazon VPC?
 
