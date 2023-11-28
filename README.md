@@ -214,33 +214,31 @@ We'll proceed to follow a step-by-step on how to create a NAT Gateway and how to
 
 Go to VPC > NAT Gateways and click **"Create NAT Gateway"**.
 
-![nat gateways](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/d33f1bff-19d9-4fd2-a937-a95a12acaae5)
+<img width="790" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/bb298bc4-2392-44e6-824e-d3afea0c524e">
 
 Create the NAT Gateway named **"test-nat"** under one of the private subnets. We choose the **"subnet-private1a"** as the subnet.
 
-![create nat gateway](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/2bb3e4f2-7fe8-40d6-a6d6-a2e07c759178)
+<img width="403" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/05ae8ac2-9165-4150-a053-f2546bf49aed">
 
 You need to allocate Elastic IP because is required for the creation of NAT gateway and then click on **"Create NAT Gateway"**.
 
-![allocate elastic IP](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/431ba184-57ef-43c7-9506-30b95f4fccb8)
+<img width="419" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/438b6bec-bdd4-4cf1-97a8-83c1641914f0">
 
 After creating the NAT Gateway, the next step is to go to the route table menu and create a route table for the private subnets.
 
 Then we edit the route table, add a default route to the Network Address Translation (NAT) Gateway.
 
-![Route tables 2](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/0eff8f0d-6a5b-4858-bc11-83aa6d5ae296)
+<img width="784" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/409367ea-1d46-41de-86ad-69a9683467ab">
 
 Next, choose route table **"test-vpc-private-rtb"**, select **"Routes"** tab, and select **"Add Route"**. Under the Target, select the NAT gateway named **"test-nat"**.
 
-![edit route](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/9a29ff8d-d0f4-45bc-9b96-a08ac91f5bfd)
-
-![test nat](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/cc8cb0f4-0ebd-4ac0-887a-96aad126c335)
+<img width="922" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/440fc331-652e-4282-8cb9-95c25fa791de">
 
 Next, go to the **"Subnet associations"** tab and click **"Edit subnet associations"**, then add one of the existing private subnets and click on **"save associations"**.
 
-![save subnet associations](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/43f1ac90-133c-485b-ab03-0daa98b9b8c3)
+<img width="917" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/ea6c0c80-a73c-4825-b75b-8faf731ae96b">
 
-![route tables update](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/39af91a0-bd1e-45b0-9816-44af569aa9c6)
+<img width="780" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/0415eb08-c087-44c3-9c8f-13f603caeb02">
 
 #### Security Group and Network ACLs
 
@@ -251,7 +249,7 @@ Security groups and network access control lists (ACLs) are both important tools
 #### Security Groups
 Security groups can be compared to a bouncer at a club who controls the flow of traffic to and from your resources in a cloud computing environment. Imagine you have a club, and you want to ensure that only authorized individuals can enter and exit. In this analogy, the club represents your cloud resources (such as virtual machines or instances), and the bouncer represents the security group.
 
-![security groups](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/a4df8009-4c73-4e7a-985c-443706650d31)
+<img width="434" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/aa1c5f43-ab46-4d95-bf80-05ef775bdaed">
 
 Just like a bouncer checks the IDs and credentials of people at the club's entrance, a security group examines the IP addresses and ports of incoming and outgoing network traffic. It acts as a virtual firewall that filters traffic based on predefined rules. These rules specify which types of traffic are allowed or denied.
 
@@ -267,7 +265,7 @@ Overall, security groups provide an essential layer of security for your cloud r
 
 Network ACLs (Access Control Lists) can be likened to a security guard for a building, responsible for controlling inbound and outbound traffic at the subnet level in a cloud computing environment. Imagine you have a building with multiple rooms and entry points, and you want to ensure that only authorized individuals can enter and exit. In this analogy, the building represents your subnet, and the security guard represents the network ACL.
 
-![Nacls](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/4ff2a794-4e02-4e99-a45d-543c62c7cd87)
+<img width="569" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/312b75ec-23d1-441b-88a2-59c9638fa068">
 
 Similar to a security guard who verifies IDs and credentials before allowing entry into the building, a network ACL examines the IP addresses and ports of incoming and outgoing network traffic. It serves as a virtual barrier or perimeter security, defining rules that dictate which types of traffic are permitted or denied.
 
@@ -283,7 +281,7 @@ In summary, network ACLs function as a virtual security guard for your subnet, r
 
 In essence, security groups and network ACLs are both important tools for securing your network on the AWS cloud, but they serve different purposes and have different use cases. Security groups are like a bouncer at a club, controlling inbound and outbound traffic to and from your resources at the individual resource level. Network ACLs, on the other hand, are like a security guard for a building, controlling inbound and outbound traffic at the subnet level.
 
-![network acls](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/ffa5e397-901c-4aa6-875c-1bdb6e291f69)
+<img width="375" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/01f5de2b-57e0-4bb1-885b-fd2240702cdd">
 
 #### VPC Peering and VPN Connection
 
@@ -291,7 +289,7 @@ In essence, security groups and network ACLs are both important tools for securi
 
 VPC Peering is a networking feature that allows you to connect two Virtual Private Clouds (VPCs) within the same cloud provider's network or across different regions. VPC Peering enables direct communication between VPCs, allowing resources in each VPC to interact with each other as if they were on the same network. It provides a secure and private connection without the need for internet access. VPC Peering is commonly used to establish connectivity between VPCs in scenarios such as multi-tier applications, resource sharing, or data replication.
 
-![vpc-peering](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/6abae5a5-39b9-4aea-9f94-605cc7b4e24d)
+<img width="578" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/fb9df7d0-3854-429d-bbfe-bf5df25f1c0d">
 
 #### Benefits of VPC Peering
 
@@ -313,8 +311,22 @@ There are two primary types of VPN connections:
 
 1. **Site-to-Site VPN**: Site-to-Site VPN establishes a secure connection between your on-premises network and the cloud provider's network. It allows communication between your on-premises resources and resources in the VPC securely and privately. This type of VPN connection is commonly used in hybrid cloud architectures.
 
-![site to site vpn](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/25a0c12d-5f42-44e7-bcaa-d7ec051ab0fb)
+<img width="596" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/c1af7036-9525-4ace-8410-c2da7227079a">
 
 2. **AWS Client VPN**: AWS Client VPN provides secure remote access to the cloud network for individual users or devices. It enables secure connectivity for remote employees, partners, or contractors to access resources in the VPC securely.
 
-![aws-client vpn](https://github.com/QuadriBello/DevOps-Cloud/assets/140855364/aba59208-e6cc-4e79-b9a2-67f3a139f306)
+<img width="587" alt="image" src="https://github.com/kalkah/AWS-Networking-implementation/assets/95209274/2271ad09-c686-4973-a52d-a8f39a11c6be">
+
+#### Benefits of VPC Connections
+
+1. **Secure Remote Access**
+
+2. **Data Encryption**
+  
+3. **Flexibility and Mobility**
+
+4. **Hybrid Cloud Connectivity**
+
+#### Summary
+
+In Summary, VPC peering enables direct communication between VPCs, simplifying network architecture and enhancing resource sharing within the cloud network. VPN connection establish secure tunnels between on-premises network and the cloud, enabling secure remote access and facilitating hybrid cloud connectivity. Both VPC peering anf VPC connections contribute to building secure, scalable and efficient network infrastructure in cloud enviroments. 
